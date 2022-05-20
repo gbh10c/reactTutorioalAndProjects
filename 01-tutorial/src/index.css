@@ -29,8 +29,19 @@ body {
   margin-top: 0.5rem;
 }
 
+.book h4 {
+  color: #617d89;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.book p {
+  margin-top: 0.5rem;
+}
+
 @media screen and (min-width: 768px) {
   .booklist {
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
   }
 }

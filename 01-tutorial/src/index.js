@@ -3,54 +3,16 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
+import { books } from './books'; //curly braces required for named import
+import Book from './Book';
+
 const BookList = () => {
   return (
     <section className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      {books.map((book, index) => {
+        return <Book key={book.id} {...book}></Book>;
+      })}
     </section>
-  );
-};
-
-const Book = () => {
-  return (
-    <div className='book'>
-      <Image />
-      <Title />
-      <Author />
-    </div>
-  );
-};
-
-const Image = () => {
-  return (
-    <img
-      src='https://images-na.ssl-images-amazon.com/images/I/51QjThE+F3L._SX381_BO1,204,203,200_.jpg'
-      alt='Ballparks book cover'
-    />
-  );
-};
-
-const Title = () => {
-  return (
-    <div>
-      <h1>Ballpark: Baseball in the American City</h1>
-    </div>
-  );
-};
-
-const Author = () => {
-  return (
-    <div>
-      <h4>Paul Goldberger</h4>
-    </div>
   );
 };
 
