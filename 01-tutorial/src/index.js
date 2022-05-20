@@ -1,55 +1,58 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import './index.css';
+
 const BookList = () => {
   return (
-  <section>
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-  </section>
-  )
-}
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+};
 
 const Book = () => {
   return (
-    <article>
+    <div className='book'>
       <Image />
       <Title />
       <Author />
-    </article>
-  )
-}
+    </div>
+  );
+};
 
 const Image = () => {
   return (
     <img
-      src='https://images-na.ssl-images-amazon.com/images/I/51QjThE+F3L._SX381_BO1,204,203,200_.jpg' alt='Ballparks book cover'
+      src='https://images-na.ssl-images-amazon.com/images/I/51QjThE+F3L._SX381_BO1,204,203,200_.jpg'
+      alt='Ballparks book cover'
     />
   );
-}
+};
 
 const Title = () => {
   return (
-    <article>
+    <div>
       <h1>Ballpark: Baseball in the American City</h1>
-    </article>
-  )
-}
+    </div>
+  );
+};
 
 const Author = () => {
   return (
-    <article>
+    <div>
       <h4>Paul Goldberger</h4>
-    </article>
-  )
-}
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
